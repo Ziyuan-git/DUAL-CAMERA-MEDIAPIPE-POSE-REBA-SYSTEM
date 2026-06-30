@@ -5342,20 +5342,20 @@ class DualCameraCapture:
 
         header.append("latency_ms")
 
-        # ---------------------------- excluding natural-related calculations ------------------------------------------
+        # ---------------------------- excluding natural-related & stability  calculations -----------------------------
         # excluding natural-related calculations (comment out this block to include them in csv output
-        natural_indices = [i for i, col in enumerate(header) if "natural" in col]
+        blank_indices = [i for i, col in enumerate(header) if "natural" in col or "stability" in col]
 
-        def blank_natural(rows):
+        def blank_columns(rows):
             for row in rows:
-                for idx in natural_indices:
+                for idx in blank_indices:
                     if idx < len(row):
                         row[idx] = ""
 
-        blank_natural(self.frame_data0)
-        blank_natural(self.frame_data1)
+        blank_columns(self.frame_data0)
+        blank_columns(self.frame_data1)
 
-        # ---------------------------------- natural-related calculations (end) ----------------------------------------
+        # ------------------------------------------------------ end ----------------------------------------------------
 
         with open(self.csv_filename0, "w", newline="") as csvfile:
             writer = csv.writer(csvfile)
