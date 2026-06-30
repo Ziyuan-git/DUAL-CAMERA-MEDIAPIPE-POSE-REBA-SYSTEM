@@ -5,25 +5,6 @@ Notes
 - facing direction = 1 for cam 0 (human's right side); -1 for cam 1
 - extension = -angle; flexion = +angle
 
-===================================================================================================================
-KIV
-===================================================================================================================
-
-## A: Neck, Trunk & Leg Analysis
-- additional score is added to ALL frames regardless
-
-## B: Arm & Wrist Analysis
-- arm supported/leaning score is added to ALL frames regardless
-- additional score is added to ALL frames regardless
-
-## Misc
-- delay in live view (about 1s) -> resolution down sampling does not help
-
-===================================================================================================================
-To Be Solved
-===================================================================================================================
-
-
 """
 
 import cv2
