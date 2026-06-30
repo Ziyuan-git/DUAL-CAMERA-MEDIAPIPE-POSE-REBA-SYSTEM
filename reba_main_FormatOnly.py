@@ -2560,7 +2560,7 @@ class DualCameraCapture:
         col_w = panel_width // num_cols
 
         font = cv2.FONT_HERSHEY_SIMPLEX
-        fs = 1.0
+        fs = 0.8
         thick = 2
         black = (0, 0, 0)
         line_h = 48
