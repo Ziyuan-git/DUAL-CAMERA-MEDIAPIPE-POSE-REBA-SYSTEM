@@ -2263,6 +2263,9 @@ class DualCameraCapture:
         trunk_len0 = self.last_valid_trunk_length0
         trunk_len1 = self.last_valid_trunk_length1
 
+        if trunk_len0 is None or trunk_len1 is None:
+            return copy.deepcopy(landmarks0), []
+
         # Cam0 hip midpoint
         hip_mid0_x = (
             landmarks0[23]["x"] * frame_width0 + landmarks0[24]["x"] * frame_width0
@@ -2927,6 +2930,9 @@ class DualCameraCapture:
 
         trunk_len0 = self.last_valid_trunk_length0
         trunk_len1 = self.last_valid_trunk_length1
+
+        if trunk_len0 is None or trunk_len1 is None:
+            return
 
         hip_mid0_x = (
             landmarks0[23]["x"] * frame_width0 + landmarks0[24]["x"] * frame_width0
