@@ -84,7 +84,7 @@ Plug in Camera 0 (side view — subject's right side) and Camera 1 (angled view)
 In the terminal: 
 
 ```bash
-py -3.11 reba_main_FormatONly.py
+py -3.11 reba_main_FormatOnly.py
 ```
 
 By default, the script uses:
